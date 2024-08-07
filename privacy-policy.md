@@ -28,4 +28,4 @@ By using the Cookie Extractor extension, you consent to the collection and use o
 We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.
 
 ## Contact Us
-If you have any questions about this privacy policy, please contact us at [crbcybersec@gmail.com].
+If you have any questions about this privacy policy, please contact us at [crbcybersecdev@gmail.com].
