@@ -1,6 +1,6 @@
 # Cookie Extractor
 
-![Logo](https://github.com/CRB-CyberSec-Dev/Cookie-Extractor/blob/main/logo.png)
+![Logo](https://github.com/CRB-CyberSec-Dev/Cookie-Extractor/blob/main/Cookie%20Extractor/icons/icon48.png)
 
 ## Overview
 
