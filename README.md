@@ -3,7 +3,7 @@
 ![Logo](https://github.com/CRB-CyberSec-Dev/Cookie-Extractor/blob/main/Cookie%20Extractor/icons/icon48.png)
 
 ## Demo video link how this work
-![Video](https://youtu.be/xdpbcb0kyBg?si=nErCcs4O4_rjeHW3)
+https://www.youtube.com/watch?v=xdpbcb0kyBg
 
 
 ## Overview
