@@ -3,7 +3,8 @@
 ![Logo](https://github.com/CRB-CyberSec-Dev/Cookie-Extractor/blob/main/Cookie%20Extractor/icons/icon48.png)
 
 ## Demo video link how this work
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xdpbcb0kyBg?si=YW3Pk-QN_NQfpFdu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+![Video](https://youtu.be/xdpbcb0kyBg?si=nErCcs4O4_rjeHW3)
+
 
 ## Overview
 
