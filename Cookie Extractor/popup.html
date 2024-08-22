@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Extractor Tool in JS Format</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="popup.js"></script>
+</head>
+
+<body class="hidescrol">
+  <div>
+    <img src="icon.png" alt="Logo" class="logo">
+    <h1>Cookie Extractor</h1>
+    <div>
+      <textarea id="cookieInput" rows="10" cols="30" placeholder="Enter the unformatted cookie here."></textarea>
+      <textarea id="cookieOutput" rows="10" cols="30" hidden="hidden"></textarea>
+    </div>
+    <br>
+
+    <div>
+    <button id="setCookiesButton">Generate JS Format</button>
+    <hr style="margin-top: 20px;margin-bottom: 20px;">
+    <label>Enter your API and URL here to send generated JS format cookie.</label>
+    <input type="text" id="apikey" style="margin-top: 10px; text-align: center;" placeholder="Enter KEY here"> 
+    <input type="text" id="apiurl" style="text-align: center;" placeholder="Enter API here">
+    <button id="send">Send</button>
+    <button id="saveConf">Save Config</button>
+    </div>
+    
+    <div class="footer">
+      <br>
+      <hr>
+      <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee">
+      <p><h3>BTC: bc1q90c30lrgcclsd9pmyqpxjecyphg7y0f2grf74u</h3></p>
+      <div class="credit">Addon by <a href="https://github.com/CRB-CyberSec-Dev" target="_blank">CRB-CyberSec-Dev on
+          GitHub</a></div>
+    </div>
+  </div>
+
+    <!-- The Modal -->
+    <div id="validationModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close">&times;</span>
+        <p id="modalMessage"></p>
+      </div>
+    </div>
+</body>
+
+</html>
