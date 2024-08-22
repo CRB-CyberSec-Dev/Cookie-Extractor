@@ -4,7 +4,7 @@
 
 ## Overview
 
-Cookie Extractor is a Chrome extension designed to help developers easily extract, manage, and export cookies from any website. This tool simplifies the process of handling cookies by allowing you to generate JavaScript code that can be used in your development projects. Whether you're working on web security, testing, or development, Cookie Extractor is a handy utility to have in your toolbox.
+**Cookie Extractor** is a powerful Chrome extension designed to help developers and cybersecurity professionals easily extract cookies from a browser's developer tools, convert them into a JavaScript format, and send them to a server for storage or analysis. The extension is highly customizable and includes API support for remote storage.
 
 ## Features
 
@@ -15,65 +15,108 @@ Cookie Extractor is a Chrome extension designed to help developers easily extrac
 - Store API keys and URLs for easy reuse.
 - Built-in support for session management.
 
-## Installation
+## Setup and Usage
 
-You can download Cookie Extractor from the [Chrome Web Store](https://chromewebstore.google.com/detail/cookie-extractor/kpcbapkecfociooepjlifimlgjbpleop).
+### Chrome Extension (Cookie Extractor)
 
-Alternatively, you can install it manually:
+1. **Install the Extension**:
+   - Download the extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/cookie-extractor/kpcbapkecfociooepjlifimlgjbpleop).
+   
+2. **Extract Cookies**:
+   - Open the Chrome Developer Tools and navigate to the `Application` tab.
+   - Use the **Cookie Extractor** extension to extract the cookies you need.
 
-1. Clone this repository to your local machine:
+3. **Send Cookies to Server**:
+   - Configure your API key and server URL in the extension.
+   - Extracted cookies can be sent directly to the server for storage or processing.
+
+### Server API (Cookie Storage)
+
+The server API is a Node.js application that stores the cookies sent from the Cookie Extractor extension.
+
+1. **Clone the Server Repository**:
    ```bash
    git clone https://github.com/CRB-CyberSec-Dev/Cookie-Extractor.git
+   cd server-api
    ```
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable "Developer mode" by toggling the switch in the top-right corner.
-4. Click on "Load unpacked" and select the `Cookie-Extractor` directory.
 
-## Usage
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-1. After installing the extension, click on the Cookie Extractor icon in your Chrome toolbar.
-2. Enter the API key and API URL in the provided fields.
-3. Paste the cookies you want to extract into the input box.
-4. Click "Generate JS Format" to create the JavaScript code.
-5. Use the "Send" button to send the generated code to the specified API endpoint.
-6. The session data can be managed through the extension's session management feature.
+3. **Configure the Server**:
+   - Create a `.env` file in the server root directory with your API key:
+     ```
+     API_KEY=your_default_api_key
+     ```
 
-## Example
+4. **Run the Server**:
+   ```bash
+   node server.js
+   ```
 
-```javascript
-const cookies = [
-  { name: "session_id", value: "abc123", domain: ".example.com", expires: "2024-12-31T23:59:59.000Z" }
-];
+5. **API Documentation**:
+   - Access the Swagger documentation at `http://localhost:3001/api-docs`.
 
-cookies.forEach(cookie => {
-  let expires = "";
-  if (cookie.expires === "Session") {
-    expires = "";  // Session cookie, no expiration
-  } else {
-    const expirationDate = new Date(cookie.expires);
-    expires = "; expires=" + expirationDate.toUTCString();
-  }
-  document.cookie = `${cookie.name}=${cookie.value}; path=/; domain=${cookie.domain}${expires}`;
-});
-```
+## API Endpoints
+
+### Cookie Extractor Extension
+
+- **Issue New API Key**
+  - **Endpoint**: `/issue-key`
+  - **Method**: POST
+
+- **Add Custom API Key**
+  - **Endpoint**: `/add-key`
+  - **Method**: POST
+
+- **Save Extracted Cookies**
+  - **Endpoint**: `/save`
+  - **Method**: POST
+  - **Headers**: 
+    - `Content-Type: application/json`
+    - `api-key: your_api_key`
+  - **Body**: JSON object with an `output` field.
+
+### Server API
+
+- **Endpoint**: `/issue-key`
+  - **Method**: POST
+  - **Description**: Generates a new API key.
+
+- **Endpoint**: `/add-key`
+  - **Method**: POST
+  - **Description**: Add a custom API key for validation.
+
+- **Endpoint**: `/save`
+  - **Method**: POST
+  - **Headers**: 
+    - `Content-Type: application/json`
+    - `api-key: your_api_key`
+  - **Description**: Saves the output data to a file.
+  - **Body**: JSON object with an `output` field.
+
+## Privacy and Security
+
+- **Privacy Policy**: This extension and server application do not collect or store personally identifiable information. All data is handled securely with CORS and API key validation. You are responsible for managing and securing your API keys.
+- **Origin Configuration**: The origin for CORS policies is set to `chrome-extension://kpcbapkecfociooepjlifimlgjbpleop`. in the listening node server.
+
+
+## Download
+
+You can download the Chrome extension from the [Chrome Web Store](https://chromewebstore.google.com/detail/cookie-extractor/kpcbapkecfociooepjlifimlgjbpleop).
 
 ## Contributing
 
-We welcome contributions from the community. If you'd like to contribute to this project, please fork the repository and create a pull request with your changes. Make sure to follow the existing coding style and add tests for your changes.
+We welcome contributions! Please see our [GitHub repository](https://github.com/CRB-CyberSec-Dev) for more details.
 
 ## Credits
 
-- Logo credit: [Smile icon by Freepik - Flaticon](https://www.flaticon.com/free-icon/smile_8383513)
+- **Logo**: [Flaticon](https://www.flaticon.com/free-icon/smile_8383513)
 
-## License
+## Buy Me a Coffee
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+**BTC :- bc1q90c30lrgcclsd9pmyqpxjecyphg7y0f2grf74u**
 
-## Contact
-
-For more information, visit the [GitHub Repository](https://github.com/CRB-CyberSec-Dev/Cookie-Extractor) or contact us via [email@example.com](mailto:email@example.com).
-
-### Explanation:
-
-- **Installation Section**: Added the link to download the extension directly from the Chrome Web Store.
-  
+<a href="#" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
