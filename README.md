@@ -2,6 +2,9 @@
 
 ![Logo](https://github.com/CRB-CyberSec-Dev/Cookie-Extractor/blob/main/Cookie%20Extractor/icons/icon48.png)
 
+## Demo video link how this work
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xdpbcb0kyBg?si=YW3Pk-QN_NQfpFdu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Overview
 
 **Cookie Extractor** is a powerful Chrome extension designed to help developers and cybersecurity professionals easily extract cookies from a browser's developer tools, convert them into a JavaScript format, and send them to a server for storage or analysis. The extension is highly customizable and includes API support for remote storage.
